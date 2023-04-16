@@ -1,11 +1,19 @@
 import React from "react";
+import "../../css/Style.css";
 
 export function NextArrow(props) {
   return (
     <>
       <div
         className={props.className}
-        style={{ backgroundColor: "transparent", padding: "80px", zIndex: "3" }}
+        style={{
+          Color: "red",
+          paddingLeft: "100px",
+          paddingRight: "100px",
+          zIndex: "4",
+
+          fontSize: "30px",
+        }}
         onClick={props.onClick}
       >
         {" "}
@@ -19,7 +27,14 @@ export function PrevArrow(props) {
     <>
       <div
         className={props.className}
-        style={{ color: "red", padding: "60px", zIndex: "3" }}
+        style={{
+          Color: "red",
+          paddingLeft: "60px",
+          paddingRight: "60px",
+          zIndex: "3",
+
+          fontSize: "30px",
+        }}
         onClick={props.onClick}
       >
         {" "}

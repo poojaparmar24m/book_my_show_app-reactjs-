@@ -3,11 +3,12 @@ import Slider from "react-slick";
 import { NextArrow, PrevArrow } from "../HeroCarousel/Arrow";
 import Poster from "../Poster/Poster";
 
-const Posterslider = ({ title, subTilte, posters, isDark }) => {
+const Posterslider = ({ title, subTilte, posters, isDark, config }) => {
   const settings = {
-    infinite: true,
-    slidesToShow: 7,
+    infinite: false,
+    slidesToShow: 6,
     slidesToScroll: 4,
+    arrows: true,
     initialSlide: 0,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
@@ -43,7 +44,7 @@ const Posterslider = ({ title, subTilte, posters, isDark }) => {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 1,
           initialSlide: 2,
           nextArrow: <NextArrow />,
@@ -62,15 +63,27 @@ const Posterslider = ({ title, subTilte, posters, isDark }) => {
         >
           {title}
         </h1>
-        <h4 className={`text-sm ${isDark ? "text-white" : "text-gray-500"}`}>
+        <h4
+          className={`text-sm py-1 ${isDark ? "text-white" : "text-gray-500"}`}
+        >
           {subTilte}
         </h4>
-
-        <Slider {...settings}>
-          {posters.map((item, index) => (
-            <Poster {...item} isDark={isDark} key={index} />
-          ))}
-        </Slider>
+        <div className="py-2">
+          {config && (
+            <Slider {...config}>
+              {posters.map((item, index) => (
+                <Poster {...item} isDark={isDark} key={index} />
+              ))}
+            </Slider>
+          )}
+          {!config && (
+            <Slider {...settings}>
+              {posters.map((item, index) => (
+                <Poster {...item} isDark={isDark} key={index} />
+              ))}
+            </Slider>
+          )}
+        </div>
       </div>
     </>
   );

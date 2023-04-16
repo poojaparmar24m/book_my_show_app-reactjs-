@@ -8,7 +8,6 @@ const DefaultLayout =
       <>
         <Navbar />
         <Component {...props} />
-        <h1>Foooter</h1>
       </>
     );
   };

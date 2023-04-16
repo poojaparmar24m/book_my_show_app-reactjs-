@@ -5,10 +5,15 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import axios from "axios";
 import Moviespage from "../src/pages/Moviespage";
 import Playpage from "../src/pages/Playpage";
 import Contextapi from "./context/Contextapi";
 import Home from "./pages/Home";
+
+axios.defaults.baseURL = "https://api.themoviedb.org/3";
+// axios.defaults.params = {};
+// axios.defaults.params["api_key"] = process.env.API_KEY;
 
 function App() {
   return (

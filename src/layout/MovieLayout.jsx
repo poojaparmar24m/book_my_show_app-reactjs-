@@ -8,7 +8,6 @@ const MovieLayout =
       <>
         <MovieNavbar />
         <Component {...props} />
-        <h1>footer</h1>
       </>
     );
   };
