@@ -1,11 +1,10 @@
+import axios from "axios";
 import React, { useContext, useEffect } from "react";
 import Entertainment from "../components/Entertainment/Entertainment";
 import Herocarousel from "../components/HeroCarousel/Herocarousel";
 import Posterslider from "../components/PosterSlider/Posterslider";
 import DefaultLayout from "../layout/DefaultLayout";
 import { dataContext } from "../context/Contextapi";
-
-import axios from "axios";
 
 const Home = () => {
   const {
