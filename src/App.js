@@ -12,7 +12,8 @@ import Contextapi from "./context/Contextapi";
 import Home from "./pages/Home";
 
 axios.defaults.baseURL = "https://api.themoviedb.org/3";
-
+// axios.defaults.params = {};
+// axios.defaults.params["api_key"] = process.env.REACT_API_KRY;
 function App() {
   return (
     <>
