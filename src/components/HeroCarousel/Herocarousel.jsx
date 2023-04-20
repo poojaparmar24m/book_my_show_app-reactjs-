@@ -26,6 +26,7 @@ const Herocarousel = () => {
         "https://assets-in.bmscdn.com/promotions/cms/creatives/1679570207589_kkrr.jpg",
     },
   ]);
+  console.log(setSliderImages);
   const settings = {
     dots: false,
     arrows: true,
